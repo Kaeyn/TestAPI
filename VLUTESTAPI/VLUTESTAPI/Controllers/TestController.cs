@@ -21,15 +21,22 @@ namespace VLUTESTAPI.Controllers
             _database = mongoClient.GetDatabase("VLUTESTDB");
         }
 
-        [HttpGet]
+        /*[HttpGet]
         public async Task<ActionResult<IEnumerable<BsonDocument>>> GetAllDocuments()
         {
             var collection = _database.GetCollection<BsonDocument>("TESTCOLLECTION");
             var documents = await collection.Find(_ => true).ToListAsync();
             Console.WriteLine(documents);
             return documents;
-        }
+        }*/
 
+        [HttpPost("GetAllDocumentsTest")]
+        public async Task<IEnumerable<TestModels>> GetAllDocumentsTest()
+        {
+            var collection = _database.GetCollection<TestModels>("TESTCOLLECTION");
+            var documents = await collection.Find(_ => true).ToListAsync();
+            return documents;
+        }
 
 
         // GET: api/GetAllCollection

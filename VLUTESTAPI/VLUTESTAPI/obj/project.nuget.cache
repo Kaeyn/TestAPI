@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xZhy6roUMMWnRCFHWceuWzxgFSY6uc5FwaN8xwcdPzgxpmeR1JSeCBt+GjkAMAhwD2Ab1uc8Jb8Mp4HFLX5QDw==",
+  "dgSpecHash": "+3kV9rlxBcMTbj45xAhyxg4FQ292gQjpbVUsrQl/5cqZGnK+ZgMAGQCcDjjy97BjlpPW5SRpnJQ+tb5wlOEINA==",
   "success": true,
   "projectFilePath": "C:\\APIWS\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mongodb.bson\\2.25.0\\mongodb.bson.2.25.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mongodb.driver\\2.25.0\\mongodb.driver.2.25.0.nupkg.sha512",
