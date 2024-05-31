@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VLUTESTAPI", "VLUTESTAPI\VLUTESTAPI.csproj", "{6D062854-D9AD-48CE-9EA7-BFCEAA3F1592}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D062854-D9AD-48CE-9EA7-BFCEAA3F1592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D062854-D9AD-48CE-9EA7-BFCEAA3F1592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D062854-D9AD-48CE-9EA7-BFCEAA3F1592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D062854-D9AD-48CE-9EA7-BFCEAA3F1592}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E603158F-747A-4808-A46F-6AC5A3D2E861}
+	EndGlobalSection
+EndGlobal
