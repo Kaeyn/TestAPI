@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+3kV9rlxBcMTbj45xAhyxg4FQ292gQjpbVUsrQl/5cqZGnK+ZgMAGQCcDjjy97BjlpPW5SRpnJQ+tb5wlOEINA==",
+  "dgSpecHash": "JWDXUzTvemcQgnWi8mBg/rPwiz9fiSwm+82QkBL8uTZWkYdBvKXF9SOqeQn7b1Dc1TII0s/qbdgWesN86SZuGw==",
   "success": true,
-  "projectFilePath": "C:\\APIWS\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\SourceTreeWS\\TestAPI\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

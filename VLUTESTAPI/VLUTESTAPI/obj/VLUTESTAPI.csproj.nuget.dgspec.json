@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\APIWS\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj": {}
+    "C:\\Users\\Admin\\Documents\\SourceTreeWS\\TestAPI\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj": {}
   },
   "projects": {
-    "C:\\APIWS\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj": {
+    "C:\\Users\\Admin\\Documents\\SourceTreeWS\\TestAPI\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\APIWS\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\SourceTreeWS\\TestAPI\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj",
         "projectName": "VLUTESTAPI",
-        "projectPath": "C:\\APIWS\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\SourceTreeWS\\TestAPI\\VLUTESTAPI\\VLUTESTAPI\\VLUTESTAPI.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\APIWS\\VLUTESTAPI\\VLUTESTAPI\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\SourceTreeWS\\TestAPI\\VLUTESTAPI\\VLUTESTAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
