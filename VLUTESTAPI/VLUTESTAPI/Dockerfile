@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/dotnet/sdk:3.1-alpine AS build
 # Copy everything needed to run the app from the "build" stage.
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["VLUTESTAPI.csproj"]
+COPY ["VLUTESTAPI.csproj", "./"]
 RUN dotnet restore "./VLUTESTAPI.csproj"
 COPY . .
 WORKDIR "/src/."
