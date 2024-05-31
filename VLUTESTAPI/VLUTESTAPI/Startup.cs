@@ -61,7 +61,7 @@ namespace VLUTESTAPI
             // Configure MongoDB client
             services.AddSingleton<IMongoClient>(sp =>
             {
-                string connectionString = Configuration.GetConnectionString("MongoDB").Value;
+                string connectionString = Configuration.GetConnectionString("MongoDB");
                 return new MongoClient(connectionString);
             });
 
