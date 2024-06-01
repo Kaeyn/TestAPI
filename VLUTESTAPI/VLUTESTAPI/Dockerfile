@@ -21,6 +21,10 @@ EXPOSE 8081
 #COPY --from=publish /app/publish .
 #ENTRYPOINT ["dotnet", "VLUTESTAPI.dll"]
 
+RUN apt-get update && \
+    apt-get install -y ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
+
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["VLUTESTAPI/VLUTESTAPI.csproj", "VLUTESTAPI/"]

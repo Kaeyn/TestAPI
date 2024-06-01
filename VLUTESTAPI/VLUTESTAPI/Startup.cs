@@ -18,6 +18,7 @@ using MongoDB.Bson;
 using VLUTESTAPI.Services;
 using Microsoft.OpenApi.Models;
 using System.Diagnostics;
+using System.Security.Authentication;
 
 namespace VLUTESTAPI
 {
@@ -43,27 +44,34 @@ namespace VLUTESTAPI
 
             services.AddScoped<TestService>();*/
 
-           /* MongoClient client = new MongoClient(Configuration.GetConnectionString("MongoDB"));
+            /*MongoClient client = new MongoClient("mongodb+srv://cakhosolo2003:admin@vlufurnituredb.swc74iv.mongodb.net/?retryWrites=true&w=majority&appName=VLUFurnitureDB");
 
             List<string> databases = client.ListDatabaseNames().ToList();
 
             foreach (string database in databases)
             {
                 Console.WriteLine(database);
-            }
+            }*/
 
-            var _collection = client.GetDatabase("VLUTESTDB").GetCollection<BsonDocument>("TESTCOLLECTION").Find(Builders<BsonDocument>.Filter.Empty).ToList();
+           /* var _collection = client.GetDatabase("VLUTESTDB").GetCollection<BsonDocument>("TESTCOLLECTION").Find(Builders<BsonDocument>.Filter.Empty).ToList();
             foreach (var document in _collection)
             {
                 Console.WriteLine(document);
             }*/
 
             // Configure MongoDB client
-            services.AddSingleton<IMongoClient>(sp =>
+            /*services.AddSingleton<IMongoClient>(sp =>
             {
                 string connectionString = Configuration.GetConnectionString("MongoDB");
                 return new MongoClient(connectionString);
-            });
+            });*/
+
+            var mongoConnectionString = Configuration.GetConnectionString("MongoDB");
+            var mongoClientSettings = MongoClientSettings.FromConnectionString(mongoConnectionString);
+            mongoClientSettings.SslSettings = new SslSettings { EnabledSslProtocols = SslProtocols.Tls12 };
+
+            var mongoClient = new MongoClient(mongoClientSettings);
+            services.AddSingleton<IMongoClient>(mongoClient);
 
 
             services.AddControllers();
