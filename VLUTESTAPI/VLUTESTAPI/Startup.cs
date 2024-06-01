@@ -67,6 +67,7 @@ namespace VLUTESTAPI
             });*/
 
             var mongoConnectionString = Configuration.GetConnectionString("MongoDB");
+            Console.WriteLine(mongoConnectionString);
             var mongoClientSettings = MongoClientSettings.FromConnectionString(mongoConnectionString);
             mongoClientSettings.SslSettings = new SslSettings { EnabledSslProtocols = SslProtocols.Tls12 };
 
