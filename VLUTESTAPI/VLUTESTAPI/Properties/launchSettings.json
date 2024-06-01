@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "ConnectionStrings": {
-        "MongoDB": "mongodb+srv://cakhosolo2003:admin@vlufurnituredb.swc74iv.mongodb.net/?retryWrites=true&w=majority&ssl=true&appName=VLUFurnitureDB"
+        "MongoDB": "mongodb+srv://cakhosolo2003:admin@vlufurnituredb.swc74iv.mongodb.net/VLUFurnitureDB?retryWrites=true&w=majority&ssl=true&appName=VLUFurnitureDB"
       }
     },
     "VLUTESTAPI": {
