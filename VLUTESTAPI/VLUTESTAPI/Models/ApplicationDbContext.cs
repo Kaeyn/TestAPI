@@ -1,6 +1,5 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
@@ -10,6 +9,12 @@ namespace VLUTESTAPI.Models
 {
     public partial class ApplicationDbContext : DbContext
     {
+        public IConfiguration Configuration { get; }
+        public ApplicationDbContext(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
         public ApplicationDbContext()
         {
         }
@@ -30,8 +35,9 @@ namespace VLUTESTAPI.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySql("server=hyperssql-cakhosolo2003-325a.e.aivencloud.com;port=17997;database=defaultdb;user=avnadmin;password=AVNS_EBxOtAQ6lHdDe2fbQEh;sslmode=Required", x => x.ServerVersion("8.0.30-mysql"));
+            #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                string connectionString = Configuration.GetConnectionString("MySQL");
+                optionsBuilder.UseMySql(connectionString, x => x.ServerVersion("8.0.30-mysql"));
             }
         }
 
