@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MongoDB.Driver;
-using MongoDB.Bson;
 using VLUTESTAPI.Models;
 
 namespace VLUTESTAPI.Controllers
@@ -14,41 +13,22 @@ namespace VLUTESTAPI.Controllers
     public class TestController : ControllerBase
     {
                
-        private readonly IMongoDatabase _database;
+        private readonly ApplicationDbContext _applicationDbContext;
 
-        public TestController(IMongoClient mongoClient)
+        public TestController(ApplicationDbContext applicationDbContext)
         {
-            _database = mongoClient.GetDatabase("VLUTESTDB");
+            _applicationDbContext = applicationDbContext;
+        }
+    
+
+        [HttpPost("GetAllProduct")]
+        public async Task<IActionResult> GetAllEmpoyee()
+        {
+            var employee = await _applicationDbContext.Product.ToListAsync();
+            return Ok(employee);
+
         }
 
-        /*[HttpGet]
-        public async Task<ActionResult<IEnumerable<BsonDocument>>> GetAllDocuments()
-        {
-            var collection = _database.GetCollection<BsonDocument>("TESTCOLLECTION");
-            var documents = await collection.Find(_ => true).ToListAsync();
-            Console.WriteLine(documents);
-            return documents;
-        }*/
-
-        [HttpPost("GetAllDocumentsTest")]
-        public async Task<IEnumerable<TestModels>> GetAllDocumentsTest()
-        {
-            var collection = _database.GetCollection<TestModels>("TESTCOLLECTION");
-            var documents = await collection.Find(_ => true).ToListAsync();
-            return documents;
-        }
-
-
-        // GET: api/GetAllCollection
-        /* [HttpGet]
-         public async Task<ActionResult<IEnumerable<YourCollectionType>>> GetAllCollection()
-         {
-             var database = _mongoClient.GetDatabase("YourDatabaseName");
-             var collection = database.GetCollection<YourCollectionType>("YourCollectionName");
-             var documents = await collection.Find(_ => true).ToListAsync();
-
-             return documents;
-         }*/
 
     }
 }
