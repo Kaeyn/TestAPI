@@ -67,7 +67,7 @@ namespace VLUTESTAPI
             var client = new HttpClient();
 
             // Make a request to the warmup endpoint
-            async Task WarmupAsync()
+           /* async Task WarmupAsync()
             {
                 var response = await client.GetAsync("http://testapi-ibo5.onrender.com/api/warmup");
 
@@ -83,7 +83,7 @@ namespace VLUTESTAPI
             }
 
             // Call the async method
-            WarmupAsync().GetAwaiter().GetResult();
+            WarmupAsync().GetAwaiter().GetResult();*/
 
             /*// Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
