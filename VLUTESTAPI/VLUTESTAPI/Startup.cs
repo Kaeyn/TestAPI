@@ -43,6 +43,7 @@ namespace VLUTESTAPI
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 dbContext.Database.EnsureCreated();
+                dbContext.Product.FirstOrDefaultAsync();
             }
 
             services.AddControllers();
@@ -71,27 +72,6 @@ namespace VLUTESTAPI
 
             app.UseAuthorization();
 
-            // Create an HTTP client
-            var client = new HttpClient();
-
-            // Make a request to the warmup endpoint
-           /* async Task WarmupAsync()
-            {
-                var response = await client.GetAsync("http://testapi-ibo5.onrender.com/api/warmup");
-
-                // Log the response
-                if (response.IsSuccessStatusCode)
-                {
-                    Console.WriteLine("Warmup Successful");
-                }
-                else
-                {
-                    Console.WriteLine("Warmup Failed");
-                }
-            }
-
-            // Call the async method
-            WarmupAsync().GetAwaiter().GetResult();*/
 
             /*// Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
