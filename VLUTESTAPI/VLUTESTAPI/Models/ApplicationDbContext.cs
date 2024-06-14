@@ -33,10 +33,9 @@ namespace VLUTESTAPI.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-            #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                
-                string connectionString = Configuration.GetConnectionString("MySQL");
-                Console.WriteLine(connectionString);
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+
+                string connectionString = Environment.GetEnvironmentVariable("MYSQL_CONNECTION_STRING");
                 optionsBuilder.UseMySql(connectionString, x => x.ServerVersion("8.0.30-mysql"));
             }
         }

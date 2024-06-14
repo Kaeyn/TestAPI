@@ -8,6 +8,7 @@ using Pomelo.EntityFrameworkCore.MySql.Storage;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using VLUTESTAPI.Models;
 using Microsoft.OpenApi.Models;
+using System;
 
 namespace VLUTESTAPI
 {
@@ -23,7 +24,12 @@ namespace VLUTESTAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = Configuration.GetConnectionString("MySQL");
+            string connectionString = Environment.GetEnvironmentVariable("MYSQL_CONNECTION_STRING");
+            Console.WriteLine($"Connection String: {connectionString}");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new ArgumentException("Connection string 'MySQL' is not configured.");
+            }
             services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(connectionString,
                 mySqlOptions =>
                 {
