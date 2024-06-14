@@ -11,6 +11,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace VLUTESTAPI
 {
@@ -43,7 +44,7 @@ namespace VLUTESTAPI
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 dbContext.Database.EnsureCreated();
-                dbContext.Product.FirstOrDefaultAsync();
+                dbContext.Model.GetEntityTypes();
             }
 
             services.AddControllers();
