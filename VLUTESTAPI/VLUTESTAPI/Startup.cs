@@ -36,7 +36,14 @@ namespace VLUTESTAPI
                                 .CharSet(CharSet.Utf8Mb4)
                                 .ServerVersion(ServerVersion.AutoDetect(connectionString));
                 }
+
              ));
+
+            using (var scope = services.BuildServiceProvider().CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                dbContext.Database.EnsureCreated(); // Or any simple query execution
+            }
 
             services.AddControllers();
 
