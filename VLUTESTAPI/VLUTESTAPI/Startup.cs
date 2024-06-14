@@ -43,8 +43,6 @@ namespace VLUTESTAPI
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 dbContext.Database.EnsureCreated();
-                dbContext.Database.OpenConnection();
-                var firstEntity = dbContext.Product.FirstOrDefaultAsync();
             }
 
             services.AddControllers();
@@ -56,23 +54,6 @@ namespace VLUTESTAPI
             });*/
         }
 
-        private async Task WarmupAsync(ApplicationDbContext dbContext)
-        {
-            try
-        {
-            // Fetch data from one entity asynchronously
-            var firstProduct = await dbContext.Product.FirstOrDefaultAsync();
-
-            // Optionally, fetch data from other entities or related entities
-            // var firstEntity2 = await dbContext.Entity2.FirstOrDefaultAsync();
-            // var relatedEntities = await dbContext.Product.Include(p => p.RelatedEntity).FirstOrDefaultAsync();
-        }
-        catch (Exception ex)
-        {
-            // Handle exceptions appropriately
-            Console.WriteLine($"Warmup error: {ex.Message}");
-        }
-        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

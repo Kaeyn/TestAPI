@@ -1,0 +1,14 @@
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\bin\Debug\netcoreapp3.1\APP.DAL.exe
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\bin\Debug\netcoreapp3.1\APP.DAL.deps.json
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\bin\Debug\netcoreapp3.1\APP.DAL.runtimeconfig.json
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\bin\Debug\netcoreapp3.1\APP.DAL.runtimeconfig.dev.json
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\bin\Debug\netcoreapp3.1\APP.DAL.dll
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\bin\Debug\netcoreapp3.1\APP.DAL.pdb
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\obj\Debug\netcoreapp3.1\APP.DAL.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\obj\Debug\netcoreapp3.1\APP.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\obj\Debug\netcoreapp3.1\APP.DAL.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\obj\Debug\netcoreapp3.1\APP.DAL.AssemblyInfo.cs
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\obj\Debug\netcoreapp3.1\APP.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\obj\Debug\netcoreapp3.1\APP.DAL.dll
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\obj\Debug\netcoreapp3.1\APP.DAL.pdb
+C:\Users\Admin\Documents\SourceTreeWS\TestAPI\VLUTESTAPI\APP.DAL\obj\Debug\netcoreapp3.1\APP.DAL.genruntimeconfig.cache
