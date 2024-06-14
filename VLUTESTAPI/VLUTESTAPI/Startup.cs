@@ -11,7 +11,6 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Linq;
 
 namespace VLUTESTAPI
 {
@@ -44,19 +43,7 @@ namespace VLUTESTAPI
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 dbContext.Database.EnsureCreated();
-                var dbSets = dbContext.GetType().GetProperties()
-               .Where(p => p.PropertyType.IsGenericType &&
-                           p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>))
-               .Select(p => p.GetValue(dbContext))
-               .ToList();
-
-                // Loop through each DbSet and execute a dummy query to initialize them
-                foreach (var dbSet in dbSets)
-                {
-                    var entityType = dbSet.GetType().GetGenericArguments().First();
-                    var method = typeof(Queryable).GetMethod("FirstOrDefault", new Type[] { typeof(IQueryable<>).MakeGenericType(entityType) });
-                    var query = method.Invoke(dbSet, new object[] { dbSet });
-                }
+                var firstEntity = dbContext.Product.FirstOrDefaultAsync();
             }
 
             services.AddControllers();
