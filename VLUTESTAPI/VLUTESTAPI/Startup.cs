@@ -42,8 +42,7 @@ namespace VLUTESTAPI
             using (var scope = services.BuildServiceProvider().CreateScope())
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-                dbContext.Database.EnsureCreated(); // Or any simple query execution
-                dbContext.Database.OpenConnection();
+                dbContext.Database.EnsureCreated();
             }
 
             services.AddControllers();
